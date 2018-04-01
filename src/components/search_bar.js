@@ -4,12 +4,15 @@ import React, {Component} from 'react';
 class Searchbar extends Component {
   constructor(props){
     super(props);
-    this.state = {term: '' };
+    this.state = {term: 'Starting value' };
   }
   render() {
+    // only the state controles the input value now:
     return (
       <div>
-        <input onChange={event => this.setState({term: event.target.value}) }/>
+        <input
+          value={this.state.term}
+          onChange={event => this.setState({term: event.target.value}) }/>
         <p>Value of the input: {this.state.term}</p>
       </div>
     );
