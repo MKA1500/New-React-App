@@ -6,13 +6,15 @@ class Searchbar extends Component {
     super(props);
     this.state = {term: 'Starting value' };
   }
+
   render() {
     // only the state controles the input value now:
     return (
       <div>
         <input
           value={this.state.term}
-          onChange={event => this.setState({term: event.target.value}) }/>
+          onChange={event => this.setState({term: event.target.value})}
+          className="form-control"/>
         <p>Value of the input: {this.state.term}</p>
       </div>
     );
