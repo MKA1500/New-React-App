@@ -14,11 +14,11 @@ class App extends Component {
 
     YTSearch({
       key: API_KEY,
-      term: 'surfboards'
-    }, (data) => {
+      term: 'Paris'
+    }, (videos) => {
       // and the arrow f doesn't bind the THIS with this function's scope, we can work :)
-      this.setState({ data });
-    // i.e. this.setState({ videos: data }); in ES6
+      this.setState({ videos });
+    // i.e. this.setState({ videos: videos }); in ES6
       console.log(this.state);
     });
   }
@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar />
-        <VideoList />
+        <VideoList videos={this.state.videos}/>
       </div>
     );
   }
