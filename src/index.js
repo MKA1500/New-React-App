@@ -14,9 +14,8 @@ class App extends Component {
 
     YTSearch({
       key: API_KEY,
-      term: 'Paris'
+      term: 'Poznań'
     }, (videos) => {
-      // and the arrow f doesn't bind the THIS with this function's scope, we can work :)
       this.setState({ videos });
     // i.e. this.setState({ videos: videos }); in ES6
       console.log(this.state);
