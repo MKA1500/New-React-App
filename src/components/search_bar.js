@@ -4,13 +4,13 @@ import React, {Component} from 'react';
 class Searchbar extends Component {
   constructor(props){
     super(props);
-    this.state = {term: 'Starting value' };
+    this.state = {term: 'Poznań' };
   }
 
   render() {
     // only the state controles the input value now:
     return (
-      <div>
+      <div className="my-2">
         <input
           value={this.state.term}
           onChange={event => this.setState({term: event.target.value})}

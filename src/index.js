@@ -17,9 +17,10 @@ class App extends Component {
       key: API_KEY,
       term: 'Poznań'
     }, (videos) => {
-      this.setState({ videos });
-    // i.e. this.setState({ videos: videos }); in ES6
-    //  console.log(this.state);
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      });
     });
   }
 
@@ -27,7 +28,7 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar />
-        <VideoDetail />
+        <VideoDetail video={this.state.selectedVideo} />
         <VideoList videos={this.state.videos}/>
       </div>
     );
