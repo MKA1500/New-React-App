@@ -1,0 +1,32 @@
+.container {
+  padding-top: 2rem;
+}
+
+.video-detail .details h5 {
+  color: #333;
+  font-weight: 700;
+  transition: color .4s ease-out;
+}
+
+.video-detail:hover .details h5 {
+  color: #cc181e;
+}
+
+.list-group-item {
+  cursor: pointer;
+  background-color: #FFF;
+  transition: all .4s ease-out;
+}
+
+.list-group-item:hover {
+  background-color: #eee;
+}
+
+.list-group-item .media-heading {
+  color: #333;
+  transition: all .4s ease-out;
+}
+
+.list-group-item:hover .media-heading {
+  color: #cc181e;
+}
